@@ -1,0 +1,14 @@
+<main class="main">
+    <h1>Image Gallery</h1>
+    <label for="file-input" class="upload-label">Upload your image:</label>
+    <input type="file" id="file-input" (change)="setImage($event)" />
+    <div class="img-to-upload-container">
+        <img class="img-to-upload" [src]="imageToUploadUrl" />
+    </div>
+    <button class="upload-btn" [disabled]="!imageToUpload" (click)="uploadImage()">Upload</button>
+    <div class="gallery">
+        @for (image of imagesInGallery; track image.id) {
+        <a target="_blank" [href]="image.url"><img class="img-in-gallery" [src]="image.url" /></a>
+        }
+    </div>
+</main>

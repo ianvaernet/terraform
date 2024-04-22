@@ -1,0 +1,9 @@
+variable "aws_region" {}
+variable "stack_name" {}
+variable "environment" {}
+variable "dynamodb_policy_arn" {}
+variable "s3_policy_arn" {}
+variable "dynamodb_table_name" {}
+variable "s3_bucket_name" {}
+variable "s3_bucket_url" {}
+variable "api_gateway_id" {}

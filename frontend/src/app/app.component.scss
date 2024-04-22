@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+h1 {
+    font-size: 3.125rem;
+    font-weight: 500;
+}
+
+.upload-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.img-to-upload-container {
+    height: 15rem;
+    width: 26.7rem;
+    margin-top: 1rem;
+    border: solid 1px #ccc;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .img-to-upload {
+        max-height: 15rem;
+        max-width: 26.7rem;
+    }
+}
+
+.upload-btn {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background-color: #333;
+    margin-top: 1rem;
+    min-height: 27rem;
+
+    .img-in-gallery {
+        max-height: 15rem;
+        max-width: 26.7rem;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.5;
+        }
+    }
+}
