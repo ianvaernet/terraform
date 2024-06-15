@@ -11,26 +11,26 @@ resource "aws_dynamodb_table" "dynamo_table" {
 }
 
 resource "aws_iam_policy" "dynamodb_crud_policy" {
-  name        = "${var.environment}-${var.stack_name}-dynamodb-crud-policy"
-  path        = "/"
-  policy = jsonencode({
-    "Version": "2012-10-17",
-    "Statement": [{
-        "Action": [
-          "dynamodb:BatchGetItem",
-          "dynamodb:BatchWriteItem",
-          "dynamodb:PutItem",
-          "dynamodb:DescribeTable",
-          "dynamodb:DeleteItem",
-          "dynamodb:GetItem",
-          "dynamodb:Scan",
-          "dynamodb:Query",
-          "dynamodb:UpdateItem"
-        ],
-        "Resource": "${aws_dynamodb_table.dynamo_table.arn}*",
-        "Effect": "Allow"
-    }]
-  })
+    name        = "${var.environment}-${var.stack_name}-dynamodb-crud-policy"
+    path        = "/"
+    policy = jsonencode({
+        "Version": "2012-10-17",
+        "Statement": [{
+            "Action": [
+                "dynamodb:BatchGetItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:DescribeTable",
+                "dynamodb:DeleteItem",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:Query",
+                "dynamodb:UpdateItem"
+            ],
+            "Resource": "${aws_dynamodb_table.dynamo_table.arn}*",
+            "Effect": "Allow"
+        }]
+    })
 }
 
 output "dynamodb_policy_arn" {
